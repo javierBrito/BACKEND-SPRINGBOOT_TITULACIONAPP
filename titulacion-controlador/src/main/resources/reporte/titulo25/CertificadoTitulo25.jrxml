@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CertificadoTitulo25" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="0" uuid="28e74c67-2aa3-4369-9e0f-7959f72f19ca">
+	<property name="ireport.zoom" value="1.2100000000000002"/>
+	<property name="ireport.x" value="160"/>
+	<property name="ireport.y" value="395"/>
+	<style name="table" forecolor="#FFFFFF" backcolor="#FFFFFF" isBold="true" isItalic="true">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1" uuid="572cc08d-6630-410d-a490-cbabc3190e7c"/>
+	<parameter name="URL_BACKGROUND" class="java.lang.String"/>
+	<parameter name="PROVINCIA" class="java.lang.String"/>
+	<parameter name="LETRAS" class="java.lang.String"/>
+	<parameter name="RECTOR" class="java.lang.String"/>
+	<parameter name="SECRETARIA" class="java.lang.String"/>
+	<parameter name="COD_TITULADO" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="CERTIFICADO" class="java.lang.String"/>
+	<parameter name="NOM_INSTITUCION" class="java.lang.String"/>
+	<parameter name="FEC_FECHA_GRADO" class="java.lang.String"/>
+	<parameter name="FEC_GRA" class="java.lang.String"/>
+	<parameter name="VAL_CALIFICACION" class="java.lang.Double"/>
+	<parameter name="NOM_TITULO" class="java.lang.String"/>
+	<parameter name="NOM_CEDULA" class="java.lang.String"/>
+	<parameter name="NOM_TITULADO" class="java.lang.String"/>
+	<parameter name="COD_REFRENDACION" class="java.lang.String"/>
+	<parameter name="NOM_ESPECIALIDAD" class="java.lang.String"/>
+	<parameter name="NOM_TIPO_TITULO" class="java.lang.String"/>
+	<background>
+		<band height="574" splitType="Stretch">
+			<image scaleImage="FillFrame" vAlign="Top">
+				<reportElement positionType="FixRelativeToBottom" stretchType="RelativeToBandHeight" x="-19" y="-19" width="839" height="593" uuid="ce90445b-c74d-4770-a1b4-29ed1f5d1fbc"/>
+				<imageExpression><![CDATA[$P{URL_BACKGROUND}]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="67" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Transparent" x="176" y="13" width="438" height="52" forecolor="#000000" uuid="48e7c230-259e-43df-946e-ed140fc0311c"/>
+				<box topPadding="15" bottomPadding="3">
+					<pen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Arial" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[República del Ecuador]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="458">
+			<staticText>
+				<reportElement x="0" y="44" width="802" height="26" uuid="98ceae90-80e3-4480-9b80-2e273dfe3842"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EN SU NOMBRE Y POR AUTORIDAD DE LA LEY LA INSTITUCIÓN EDUCATIVA]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="672" y="364" width="120" height="51" uuid="657cd63c-da55-45cf-9a90-5fc3a8d6c521"/>
+				<graphicElement>
+					<pen lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<componentElement>
+				<reportElement positionType="Float" x="672" y="365" width="120" height="51" uuid="a60d8c53-9661-4f5f-8306-9d8ca5e3fea7"/>
+				<jr:Code39 xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" textPosition="bottom" checksumMode="auto">
+					<jr:codeExpression><![CDATA[$P{CERTIFICADO}]]></jr:codeExpression>
+				</jr:Code39>
+			</componentElement>
+			<staticText>
+				<reportElement x="0" y="105" width="802" height="20" uuid="6d41945a-7f98-46ee-858f-21992395dd7d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<text><![CDATA[CONFIERE A:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="114" y="260" width="598" height="25" uuid="24719c9c-d4b1-4609-8ba7-7c283c444c60"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<text><![CDATA[Por haber aprobado los estudios reglamentarios en el nivel de Bachillerato.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="114" y="294" width="154" height="20" uuid="9bb6c840-8521-4b08-8b05-26d6b9e99df3"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<text><![CDATA[con la calificación de]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="114" y="334" width="129" height="20" uuid="3183db87-bdd8-4da9-9754-9c9eef495184"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<text><![CDATA[Dado y firmado en:]]></text>
+			</staticText>
+			<textField pattern="">
+				<reportElement x="261" y="294" width="451" height="20" uuid="f3eee962-652b-42bf-9f20-5172624309c6"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{VAL_CALIFICACION}+" "+"("+ $P{LETRAS}+")"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="129" width="802" height="30" uuid="5ff1ccb7-6810-4016-9fe5-f7641f8af51e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="17" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{NOM_TITULADO}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="22" y="441" width="328" height="17" uuid="a7822191-fab0-4f7f-8e29-c4cd9319617a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Rector (a)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="384" y="441" width="328" height="17" uuid="2f942fee-85a6-4c5d-ac43-8b21c5cb0bec"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Secretario(a)]]></text>
+			</staticText>
+			<textField pattern="">
+				<reportElement x="0" y="228" width="802" height="30" uuid="00b5b1f6-e570-484f-8c52-39360465e91a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="17" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{NOM_ESPECIALIDAD}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="195" width="802" height="30" uuid="898ff275-cea4-4bf2-a68a-da5ff9f15b5f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="17" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{NOM_TITULO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="71" width="802" height="30" uuid="6d317bcd-6b37-44d6-a357-31ff76557f4e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="17" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{NOM_INSTITUCION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="243" y="335" width="559" height="20" uuid="9ef0a834-4221-41bf-8dae-d31bcf4c5b51"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PROVINCIA}+ ", " + $P{FEC_GRA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="384" y="421" width="328" height="20" uuid="eafdd078-9b40-49ab-8de2-9b371d0bcb98"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{SECRETARIA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="22" y="421" width="328" height="20" uuid="00e2d59a-d631-4d6d-b949-5332e7ab9d32"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{RECTOR}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="162" width="802" height="30" uuid="8dff7540-85bc-42e3-8ed6-3f2224bf7a47"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="16" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["EL TÍTULO DE "+$P{NOM_TIPO_TITULO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="50" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CertificadoTituloDuplicado" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="0" uuid="28e74c67-2aa3-4369-9e0f-7959f72f19ca">
+	<property name="ireport.zoom" value="1.2100000000000002"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table" forecolor="#FFFFFF" backcolor="#FFFFFF" isBold="true" isItalic="true">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1" uuid="572cc08d-6630-410d-a490-cbabc3190e7c"/>
+	<parameter name="URL_BACKGROUND" class="java.lang.String"/>
+	<parameter name="PROVINCIA" class="java.lang.String"/>
+	<parameter name="titCargo" class="java.util.Map"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="carCodigo" class="java.lang.Long"/>
+	<field name="carNombre" class="java.lang.String"/>
+	<field name="carEstado" class="java.lang.Integer"/>
+	<background>
+		<band height="574" splitType="Stretch">
+			<image scaleImage="FillFrame" vAlign="Top">
+				<reportElement positionType="FixRelativeToBottom" stretchType="RelativeToBandHeight" x="-19" y="-19" width="839" height="593" uuid="ce90445b-c74d-4770-a1b4-29ed1f5d1fbc"/>
+				<imageExpression><![CDATA[$P{URL_BACKGROUND}]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="34" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Transparent" x="413" y="0" width="338" height="20" forecolor="#000000" uuid="48e7c230-259e-43df-946e-ed140fc0311c"/>
+				<box topPadding="15" bottomPadding="3">
+					<pen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Arial" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[República del Ecuador]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="92" y="8" width="100" height="20" uuid="52112a0b-e90b-412c-8a32-7e4d122e0e16"/>
+				<textFieldExpression><![CDATA[$P{PROVINCIA}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="33" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="10" width="100" height="20" uuid="dfd40ff7-4736-4a50-8175-cd5a0da36ae7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Código]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="10" width="100" height="20" uuid="51c9faa4-3709-4ad5-af23-aff8732ebc34"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="276" y="7" width="248" height="20" uuid="1e2729cc-20e9-4b06-a30d-6a08df3a6a20"/>
+				<textFieldExpression><![CDATA[$P{titCargo}.get("carNombre")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="541" y="7" width="196" height="20" uuid="15b49a12-bc3e-4b23-a38e-124f13e3982d"/>
+				<textFieldExpression><![CDATA[$P{titCargo}.get("carCodigo")]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23">
+			<textField>
+				<reportElement x="10" y="0" width="100" height="20" uuid="5cdd7c4e-3ba9-4a1d-807b-eeb3fb924c83"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{carCodigo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="113" y="0" width="97" height="20" uuid="95945c9c-4487-434f-a9f1-f87d0823c000"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{carNombre}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="50" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
